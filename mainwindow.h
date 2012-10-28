@@ -147,6 +147,8 @@ private slots:
 
     void on_BOD_ob_editingFinished();
 
+    void refreshme();
+
 private:
     Ui::MainWindow *ui;
 };

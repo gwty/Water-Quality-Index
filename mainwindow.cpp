@@ -6,12 +6,24 @@
 #include "QLCDNumber"
 #include "QVBoxLayout"
 #include<QString>
+#include <qwt_plot.h>
+#include <qwt_plot_curve.h>
+#include<QString>
+
+QwtPlot *hell;
+QwtPlotCurve *c1,*c2;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QwtPlot *myPlot = new QwtPlot(QwtText("Graph"), ui->graph);
+    hell=myPlot;
+     ui->graphh->addWidget(hell);
+     QwtPlotCurve *curve1 = new QwtPlotCurve("WQI");
+     c1=curve1;
+      curve1->attach(hell);
 }
 
 MainWindow::~MainWindow()
@@ -21,6 +33,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_pressed()
 {
+
     exit(EXIT_SUCCESS);
 }
 
@@ -36,45 +49,13 @@ void MainWindow::on_actionSave_As_triggered()
 {
      QString fileName = QFileDialog::getSaveFileName(this);
      string file=fileName.toStdString();
-     savetofile(file,s);
+     savetofile(file);
 }
 
 void MainWindow::on_BOD_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,0);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_BOD_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,1);
-     temp=0;
-    refreshme();
-}
-
-void MainWindow::on_BOD_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,2);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_BOD_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,3);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_BOD_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,4);
+    s[Y].insert(temp,0);
      temp=0;
      refreshme();
 }
@@ -82,163 +63,34 @@ void MainWindow::on_BOD_wnqn_textEdited(const QString &arg1)
 void MainWindow::on_TH_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,5);
+    s[Y].insert(temp,1);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_TH_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,6);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_TH_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,7);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_TH_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,8);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_TH_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,9);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_Mg_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,10);
+    s[Y].insert(temp,2);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_Mg_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,11);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_Mg_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,12);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_Mg_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,13);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_Mg_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,14);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_Ca_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,15);
+    s[Y].insert(temp,3);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_Ca_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,16);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_Ca_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,17);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_Ca_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,18);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_Ca_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,19);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_TDS_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,20);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_TDS_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,21);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_TDS_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,22);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_TDS_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,23);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_TDS_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,24);
+    s[Y].insert(temp,4);
      temp=0;
      refreshme();
 }
@@ -246,121 +98,25 @@ void MainWindow::on_TDS_wnqn_textEdited(const QString &arg1)
 void MainWindow::on_CL_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,25);
+    s[Y].insert(temp,5);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_CL_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,26);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_CL_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,27);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_CL_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,28);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_CL_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,29);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_SO4_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,30);
+    s[Y].insert(temp,6);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_SO4_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,31);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_SO4_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,32);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_SO4_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,33);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_SO4_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,34);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_NO3_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,35);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_NO3_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,36);
-     temp=0;
-    refreshme();
-}
-
-void MainWindow::on_NO3_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,37);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_NO3_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,38);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_NO3_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,39);
+    s[Y].insert(temp,7);
      temp=0;
      refreshme();
 }
@@ -369,40 +125,7 @@ void MainWindow::on_NO3_wnqn_textEdited(const QString &arg1)
 void MainWindow::on_PO4_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,40);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_PO4_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,41);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_PO4_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,42);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_PO4_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,43);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_PO4_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,44);
+    s[Y].insert(temp,8);
      temp=0;
      refreshme();
 }
@@ -411,126 +134,30 @@ void MainWindow::on_PO4_wnqn_textEdited(const QString &arg1)
 void MainWindow::on_EC_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,45);
+    s[Y].insert(temp,9);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_EC_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,46);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_EC_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,47);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_EC_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,48);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_EC_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,49);
-     temp=0;
-     refreshme();
-}
 
 
 void MainWindow::on_PH_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,50);
+    s[Y].insert(temp,10);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_PH_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,51);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_PH_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,52);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_PH_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,53);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_PH_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,54);
-     temp=0;
-     refreshme();
-}
 
 void MainWindow::on_Na_ob_textEdited(const QString &arg1)
 {
     float temp=arg1.toFloat();
-    s.insert(temp,55);
+    s[Y].insert(temp,11);
      temp=0;
      refreshme();
 }
 
-void MainWindow::on_Na_vstd_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,56);
-     temp=0;
-     refreshme();
-
-}
-
-void MainWindow::on_Na_uwt_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,57);
-     temp=0;
-     refreshme();
-}
-
-void MainWindow::on_Na_qr_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,58);
-     temp=0;
-    refreshme();
-}
-
-void MainWindow::on_Na_wnqn_textEdited(const QString &arg1)
-{
-    float temp=arg1.toFloat();
-    s.insert(temp,59);
-    temp=0;
-    refreshme();
-}
 
 void MainWindow::on_newparam_clicked()
 {
@@ -546,16 +173,239 @@ void MainWindow::on_newparam_clicked()
 
 }
 
+
 void MainWindow::refreshme()
 {
-    ui->sum1->setNum(sum[0]);
-    ui->sum2->setNum(sum[1]);
-    ui->sum3->setNum(sum[2]);
-    ui->sum4->setNum(sum[3]);
-    ui->sum5->setNum(sum[4]);
+    QString str;
+    str.setNum(s[Y].values[0].obs_val);
+    ui->BOD_ob->setText(str);
+    str.setNum(s[Y].values[1].obs_val);
+    ui->TH_ob->setText(str);
+    str.setNum(s[Y].values[2].obs_val);
+    ui->Mg_ob->setText(str);
+    str.setNum(s[Y].values[3].obs_val);
+    ui->Ca_ob->setText(str);
+    str.setNum(s[Y].values[4].obs_val);
+    ui->TDS_ob->setText(str);
+    str.setNum(s[Y].values[5].obs_val);
+    ui->CL_ob->setText(str);
+    str.setNum(s[Y].values[6].obs_val);
+    ui->SO4_ob->setText(str);
+    str.setNum(s[Y].values[7].obs_val);
+    ui->NO3_ob->setText(str);
+    str.setNum(s[Y].values[8].obs_val);
+    ui->PO4_ob->setText(str);
+    str.setNum(s[Y].values[9].obs_val);
+    ui->EC_ob->setText(str);
+    str.setNum(s[Y].values[10].obs_val);
+    ui->PH_ob->setText(str);
+    str.setNum(s[Y].values[11].obs_val);
+    ui->Na_ob->setText(str);
+
+
+
+
+
+    ui->v1->setNum(s[Y].values[0].v_std);
+    ui->v2->setNum(s[Y].values[1].v_std);
+    ui->v3->setNum(s[Y].values[2].v_std);
+    ui->v4->setNum(s[Y].values[3].v_std);
+    ui->v5->setNum(s[Y].values[4].v_std);
+    ui->v6->setNum(s[Y].values[5].v_std);
+    ui->v7->setNum(s[Y].values[6].v_std);
+    ui->v8->setNum(s[Y].values[7].v_std);
+    ui->v9->setNum(s[Y].values[8].v_std);
+    ui->v10->setNum(s[Y].values[9].v_std);
+    ui->v11->setNum(s[Y].values[10].v_std);
+    ui->v12->setNum(s[Y].values[11].v_std);
+
+    ui->uw1->setNum(s[Y].values[0].uwt);
+    ui->uw2->setNum(s[Y].values[1].uwt);
+    ui->uw3->setNum(s[Y].values[2].uwt);
+    ui->uw4->setNum(s[Y].values[3].uwt);
+    ui->uw5->setNum(s[Y].values[4].uwt);
+    ui->uw6->setNum(s[Y].values[5].uwt);
+    ui->uw7->setNum(s[Y].values[6].uwt);
+    ui->uw8->setNum(s[Y].values[7].uwt);
+    ui->uw9->setNum(s[Y].values[8].uwt);
+    ui->uw10->setNum(s[Y].values[9].uwt);
+    ui->uw11->setNum(s[Y].values[10].uwt);
+    ui->uw12->setNum(s[Y].values[11].uwt);
+
+
+    ui->sum1->setNum(s[Y].sum[0]);
+    ui->sum2->setNum(s[Y].sum[1]);
+    ui->sum3->setNum(s[Y].sum[2]);
+    ui->sum4->setNum(s[Y].sum[3]);
+    ui->sum5->setNum(s[Y].sum[4]);
+    ui->q1->setNum(s[Y].values[0].qr);
+    ui->q2->setNum(s[Y].values[1].qr);
+    ui->q3->setNum(s[Y].values[2].qr);
+    ui->q4->setNum(s[Y].values[3].qr);
+    ui->q5->setNum(s[Y].values[4].qr);
+    ui->q6->setNum(s[Y].values[5].qr);
+    ui->q7->setNum(s[Y].values[6].qr);
+    ui->q8->setNum(s[Y].values[7].qr);
+    ui->q9->setNum(s[Y].values[8].qr);
+    ui->q10->setNum(s[Y].values[9].qr);
+    ui->q11->setNum(s[Y].values[10].qr);
+    ui->q12->setNum(s[Y].values[11].qr);
+
+
+    ui->w1->setNum(s[Y].values[0].qn);
+    ui->w2->setNum(s[Y].values[1].qn);
+    ui->w3->setNum(s[Y].values[2].qn);
+    ui->w4->setNum(s[Y].values[3].qn);
+    ui->w5->setNum(s[Y].values[4].qn);
+    ui->w6->setNum(s[Y].values[5].qn);
+    ui->w7->setNum(s[Y].values[6].qn);
+    ui->w8->setNum(s[Y].values[7].qn);
+    ui->w9->setNum(s[Y].values[8].qn);
+    ui->w10->setNum(s[Y].values[9].qn);
+    ui->w11->setNum(s[Y].values[10].qn);
+    ui->w12->setNum(s[Y].values[11].qn);
+
+    ui->wqi->setNum(100*(s[Y].sum[4]/s[Y].sum[3]));
+
+    ui->Year->setNum(Y+1962);
+    s[Y].updgraph();
+
+ // add curves
+
+ // copy the data into the curves
+ delete c1;
+ c1=new QwtPlotCurve;
+ c1->setRawSamples(years,wqi,10);
+ c1->attach(hell);
+ //hell->setAxisAutoScale(QwtPlot::xBottom);
+ //hell->setAxisAutoScale(QwtPlot::yLeft);
+ // curve2->setRawSamples(wqi,years,400);
+ hell->setAxisScale(QwtPlot::xBottom,2010,2020,1);
+ //curve2->attach(hell);
+
+ // finally, refresh the plot
+ hell->replot();
 }
 
 void MainWindow::on_BOD_ob_editingFinished()
 {
+    refreshme();
+}
 
+void MainWindow::on_BOD_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,0);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_TH_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,1);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_Mg_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,2);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_Ca_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,3);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_TDS_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,4);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_CL_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,5);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_SO4_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,6);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_NO3_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,7);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_PO4_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,8);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_EC_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,9);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_PH_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,10);
+     temp=0;
+     refreshme();
+}
+
+void MainWindow::on_Na_ob_textChanged(const QString &arg1)
+{
+    float temp=arg1.toFloat();
+    s[Y].insert(temp,11);
+     temp=0;
+     refreshme();
+}
+
+
+
+void MainWindow::on_prev_clicked()
+{
+    Y--;
+    refreshme();
+}
+
+void MainWindow::on_next_clicked()
+{
+    Y++;
+    refreshme();
+}
+
+void MainWindow::on_actionLoad_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this);
+    string file=fileName.toStdString();
+    loadfromfile(file);
+    refreshme();
 }

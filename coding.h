@@ -7,21 +7,23 @@
 #include "QString"
 #include "QFile"
 using namespace std;
-double sum[5]={0.0};
+double years[100];
+double wqi[100];
+int Y=50;
+double qnformula(double vn,double std_val,double ph=0);
 class sample
 {
       private:
         struct rows
                    {
-                        float param;
-                        float obs_val;
-                        float v_std;
-                        float uwt;
-                        float qr;
-                        float qn;
+                        char param[20];
+                        double obs_val;
+                        double v_std;
+                        double uwt;
+                        double qr;
+                        double qn;
                         rows()
                         {
-                            param=0;
                             obs_val=0;
                             v_std=0;
                             uwt=0;
@@ -30,42 +32,39 @@ class sample
                         }
                     }values[20];        //the number of parameters, like Ca,BOD... extendible upto 20
        public:
+        double sum[5];
+        sample()
+        {
+            values[10].obs_val=7;
+            values[0].v_std=5;
+            values[1].v_std=30;
+            values[2].v_std=200;
+            values[3].v_std=200;
+            values[4].v_std=500;
+            values[5].v_std=250;
+            values[6].v_std=200;
+            values[7].v_std=10.0;
+            values[8].v_std=0.05;
+            values[9].v_std=1000;
+            values[10].v_std=8.5;
+            values[11].v_std=250;
+            for(int i=0;i<12;i++)
+                values[i].uwt=(1/values[i].v_std);
+        }
+
         void insert(float,int);
         void calculate();
         void updatesum();
+        void updgraph();
+        friend class MainWindow;
 
 };
 
 
 void sample::insert(float value,int where)
 {
-    int times=0;
-    int count=0;
-    int i=0;
-    int temp=0;
-    temp=where%10;
-    while(where/5!=0)
-    {
-    where/=5;
-    count++;
-    }
-    i=where/5;
-    if(temp<5)
-           times=temp;
-    else
-        times=temp-5;
 
-
-    switch(times)
-    {
-           //case 1:values[i].param=value;break;
-           case 0:values[i].obs_val=value;break;
-           case 1:values[i].v_std=value;break;
-           case 2:values[i].uwt=value;break;
-           case 3:values[i].qr=value;break;
-           case 4:values[i].qn=value;break;
-     default:cout<<"Error dude!"<<endl;
-    }
+    values[where].obs_val=value;
 
 
     /*
@@ -97,9 +96,18 @@ void sample::updatesum()
     sum[2]=0;
     sum[3]=0;
     sum[4]=0;
+    for(int i=0;i<20;i++)
+    {
+        if(values[i].obs_val!=0)
+            values[i].qr=qnformula(values[i].obs_val,values[i].v_std);
+
+        if(i==10)
+            values[i].qr=qnformula(values[i].obs_val,values[i].v_std,1);
+
+        values[i].qn=values[i].qr*values[i].uwt;
+    }
     for(int j=0;j<20;j++)
     {
-        cout<<values[6].obs_val;
             sum[0]+=values[j].obs_val;
             sum[1]+=values[j].v_std;
             sum[2]+=values[j].uwt;
@@ -108,19 +116,54 @@ void sample::updatesum()
     }
 }
 
-sample s;
+sample s[100];
 
-void savetofile(string file,sample &s)
+void savetofile(string file)
 {
     ofstream op;
-    op.open(file.c_str(),ios::binary|ios::app);
+    op.open(file.c_str(),ios::binary);
     op.write((char *)&s,sizeof(s));
     op.close();
+}
+
+void loadfromfile(string file)
+{
+    ifstream ip;
+    ip.open(file.c_str(),ios::binary);
+    ip.read((char *)&s,sizeof(s));
+    ip.close();
 }
 
 void hello()
 {
     std::cout<<"Hello!";
-    savetofile("Hello",s);
+    savetofile("Hello");
 }
+
+double qnformula(double vn,double std_val,double ph)
+{
+    double qn;
+    double vio=0;
+    if(ph==1)
+           vio=7;
+
+    qn=((100*(vn-vio))/(std_val));
+    return qn;
+}
+
+void sample::updgraph()
+{
+    int times=0;
+    for(int i=0;i<100;i++)
+    {
+        if(s[i].sum[3]!=0)
+            {
+                years[times]=i+1962;
+                wqi[times]=100*(s[i].sum[4]/s[i].sum[3]);
+                times++;
+            }
+
+    }
+}
+
 #endif // CODING_H

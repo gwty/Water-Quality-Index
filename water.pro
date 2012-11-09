@@ -18,3 +18,19 @@ HEADERS  += mainwindow.h \
     coding.h
 
 FORMS    += mainwindow.ui
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/release/ -lqwt
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/debug/ -lqwt
+else:symbian: LIBS += -lqwt
+else:unix: LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/ -lqwt
+
+INCLUDEPATH += $$PWD/../../Downloads/qwt-6.0.1
+DEPENDPATH += $$PWD/../../Downloads/qwt-6.0.1
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/release/ -lqwt
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/debug/ -lqwt
+else:symbian: LIBS += -lqwt
+else:unix: LIBS += -L$$PWD/../../Downloads/qwt-6.0.1/lib/ -lqwt
+
+INCLUDEPATH += $$PWD/../../Downloads/qwt-6.0.1/src
+DEPENDPATH += $$PWD/../../Downloads/qwt-6.0.1/src

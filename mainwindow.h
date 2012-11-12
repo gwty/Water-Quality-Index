@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
 namespace Ui {
 class MainWindow;
 }
@@ -22,10 +21,10 @@ private slots:
 
     void on_actionSave_As_triggered();
 
-    void on_BOD_ob_textEdited(const QString &arg1);
+    void on_CO3_ob_textEdited(const QString &arg1);
 
 
-    void on_TH_ob_textEdited(const QString &arg1);
+    void on_HCO3_ob_textEdited(const QString &arg1);
 
     void on_Mg_ob_textEdited(const QString &arg1);
 
@@ -43,13 +42,6 @@ private slots:
     void on_SO4_ob_textEdited(const QString &arg1);
 
 
-
-    void on_NO3_ob_textEdited(const QString &arg1);
-
-
-    void on_PO4_ob_textEdited(const QString &arg1);
-
-
     void on_EC_ob_textEdited(const QString &arg1);
 
 
@@ -62,13 +54,11 @@ private slots:
 
     void on_newparam_clicked();
 
-    void on_BOD_ob_editingFinished();
 
     void refreshme();
 
-    void on_BOD_ob_textChanged(const QString &arg1);
 
-    void on_TH_ob_textChanged(const QString &arg1);
+    void on_HCO3_ob_textChanged(const QString &arg1);
 
     void on_Mg_ob_textChanged(const QString &arg1);
 
@@ -80,9 +70,7 @@ private slots:
 
     void on_SO4_ob_textChanged(const QString &arg1);
 
-    void on_NO3_ob_textChanged(const QString &arg1);
-
-    void on_PO4_ob_textChanged(const QString &arg1);
+    void on_Fe_ob_textChanged(const QString &arg1);
 
     void on_EC_ob_textChanged(const QString &arg1);
 
@@ -95,6 +83,23 @@ private slots:
     void on_next_clicked();
 
     void on_actionLoad_triggered();
+
+    void on_place_editingFinished();
+
+    void on_place_textEdited(const QString &arg1);
+    void settozero();
+
+    void on_CO3_ob_editingFinished();
+
+    void on_HCO3_ob_editingFinished();
+
+    void on_CO3_ob_textChanged(const QString &arg1);
+
+    void on_Fe_ob_textEdited(const QString &arg1);
+
+    void on_actionSave_As_Text_triggered();
+
+    void on_actionSave_Graph_triggered();
 
 private:
     Ui::MainWindow *ui;

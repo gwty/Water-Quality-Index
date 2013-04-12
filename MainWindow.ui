@@ -6,33 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1438</width>
-    <height>729</height>
+    <width>1611</width>
+    <height>786</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:rgb(0, 0, 0);background:rgb(255,255,255);</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>530</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>OK</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>30</y>
-      <width>35</width>
+      <y>50</y>
+      <width>36</width>
       <height>421</height>
      </rect>
     </property>
@@ -123,7 +116,7 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>30</y>
+      <y>50</y>
       <width>114</width>
       <height>431</height>
      </rect>
@@ -168,9 +161,9 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>30</y>
+      <y>50</y>
       <width>101</width>
-      <height>431</height>
+      <height>441</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -179,8 +172,13 @@
      </property>
      <item>
       <widget class="QLabel" name="v1">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -192,8 +190,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -205,8 +208,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v3">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -218,8 +226,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -231,8 +244,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v5">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -244,8 +262,16 @@
      </item>
      <item>
       <widget class="QLabel" name="v6">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -257,8 +283,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v7">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -270,8 +301,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v8">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -283,8 +319,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v9">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -296,8 +337,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v10">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -309,8 +355,13 @@
      </item>
      <item>
       <widget class="QLabel" name="v11">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -326,9 +377,9 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>30</y>
+      <y>50</y>
       <width>101</width>
-      <height>431</height>
+      <height>441</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -337,8 +388,13 @@
      </property>
      <item>
       <widget class="QLabel" name="uw1">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -350,8 +406,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -363,8 +424,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw3">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -376,8 +442,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -389,8 +460,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw5">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -402,8 +478,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw6">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -415,8 +496,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw7">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -428,8 +514,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw8">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -440,9 +531,17 @@
       </widget>
      </item>
      <item>
+      <layout class="QGridLayout" name="gridLayout"/>
+     </item>
+     <item>
       <widget class="QLabel" name="uw9">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -454,8 +553,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw10">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -467,8 +571,13 @@
      </item>
      <item>
       <widget class="QLabel" name="uw11">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -484,9 +593,9 @@
     <property name="geometry">
      <rect>
       <x>530</x>
-      <y>30</y>
+      <y>50</y>
       <width>101</width>
-      <height>431</height>
+      <height>441</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -498,8 +607,13 @@
      </property>
      <item>
       <widget class="QLabel" name="q1">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -511,8 +625,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -524,8 +643,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q3">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -537,8 +661,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -550,8 +679,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q5">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -563,8 +697,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q6">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -576,8 +715,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q7">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -589,8 +733,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q8">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -602,8 +751,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q9">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -615,8 +769,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q10">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -628,8 +787,13 @@
      </item>
      <item>
       <widget class="QLabel" name="q11">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -645,9 +809,9 @@
     <property name="geometry">
      <rect>
       <x>670</x>
-      <y>30</y>
+      <y>50</y>
       <width>101</width>
-      <height>431</height>
+      <height>441</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -656,8 +820,13 @@
      </property>
      <item>
       <widget class="QLabel" name="w1">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -669,8 +838,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -682,8 +856,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w3">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -695,8 +874,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -708,8 +892,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w5">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -721,8 +910,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w6">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -734,8 +928,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w7">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -747,8 +946,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w8">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -760,8 +964,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w9">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -773,8 +982,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w10">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -786,8 +1000,13 @@
      </item>
      <item>
       <widget class="QLabel" name="w11">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 64);</string>
+        <string notr="true">color: rgb(0,0, 0);border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -803,36 +1022,90 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
-      <width>801</width>
+      <y>10</y>
+      <width>771</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <property name="sizeConstraint">
       <enum>QLayout::SetMinimumSize</enum>
      </property>
-     <item>
+     <item alignment="Qt::AlignLeft">
       <widget class="QLabel" name="label_15">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>40</width>
+         <width>10</width>
          <height>29</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
-        <string>        Parameters</string>
+        <string>    Parameters         </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="indent">
+        <number>0</number>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_16">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
         <string>Observed Value</string>
        </property>
@@ -840,15 +1113,37 @@
      </item>
      <item>
       <widget class="QLabel" name="label_19">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
-        <string>     V Standard</string>
+        <string>      V Standard    </string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_18">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
-        <string>            Unit Weight</string>
+        <string>      Unit Weight       </string>
        </property>
       </widget>
      </item>
@@ -856,19 +1151,41 @@
       <widget class="QLabel" name="label_17">
        <property name="maximumSize">
         <size>
-         <width>170</width>
+         <width>195</width>
          <height>29</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
-        <string>              Quality rating                             </string>
+        <string>   Quality rating   </string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black</string>
+       </property>
        <property name="text">
-        <string>      WnQn</string>
+        <string>         WnQn          </string>
        </property>
       </widget>
      </item>
@@ -877,9 +1194,9 @@
    <widget class="QPushButton" name="newparam">
     <property name="geometry">
      <rect>
-      <x>800</x>
-      <y>480</y>
-      <width>85</width>
+      <x>0</x>
+      <y>560</y>
+      <width>121</width>
       <height>27</height>
      </rect>
     </property>
@@ -890,9 +1207,9 @@
    <widget class="QWidget" name="horizontalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>470</y>
-      <width>661</width>
+      <x>90</x>
+      <y>490</y>
+      <width>701</width>
       <height>51</height>
      </rect>
     </property>
@@ -908,7 +1225,10 @@
         </font>
        </property>
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -929,7 +1249,10 @@
         </font>
        </property>
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -950,7 +1273,10 @@
         </font>
        </property>
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -971,7 +1297,10 @@
         </font>
        </property>
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -992,7 +1321,10 @@
         </font>
        </property>
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid grey</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -1017,7 +1349,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>490</y>
+      <y>510</y>
       <width>50</width>
       <height>14</height>
      </rect>
@@ -1029,11 +1361,14 @@
    <widget class="QLabel" name="label_20">
     <property name="geometry">
      <rect>
-      <x>229</x>
-      <y>540</y>
+      <x>230</x>
+      <y>560</y>
       <width>141</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid grey</string>
     </property>
     <property name="text">
      <string>Water Quality Index</string>
@@ -1042,8 +1377,8 @@
    <widget class="QLabel" name="wqi">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>540</y>
+      <x>390</x>
+      <y>560</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -1054,43 +1389,23 @@
       <italic>true</italic>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid grey</string>
+    </property>
     <property name="text">
      <string>0</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="prev">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>140</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Prev</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="next">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>140</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Next</string>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QWidget" name="graph" native="true">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>-10</y>
-      <width>531</width>
-      <height>451</height>
+      <x>800</x>
+      <y>10</y>
+      <width>811</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -1103,9 +1418,9 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>50</y>
-       <width>561</width>
-       <height>401</height>
+       <y>0</y>
+       <width>811</width>
+       <height>531</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -1117,24 +1432,17 @@
      <layout class="QHBoxLayout" name="graphh"/>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="place">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>110</y>
-      <width>113</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_21">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>600</y>
-      <width>71</width>
+      <x>290</x>
+      <y>630</y>
+      <width>81</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid grey</string>
     </property>
     <property name="text">
      <string>Type of WQI</string>
@@ -1143,8 +1451,8 @@
    <widget class="QLabel" name="wqiresult">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>590</y>
+      <x>390</x>
+      <y>620</y>
       <width>151</width>
       <height>41</height>
      </rect>
@@ -1154,20 +1462,64 @@
       <pointsize>15</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid grey</string>
+    </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QLabel" name="label_22">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>660</x>
       <y>610</y>
-      <width>221</width>
-      <height>81</height>
+      <width>111</width>
+      <height>20</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout"/>
+    <property name="text">
+     <string>Place</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="place">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>630</y>
+      <width>113</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prev">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>660</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prev</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="next">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>660</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -1175,8 +1527,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1438</width>
-     <height>24</height>
+     <width>1611</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

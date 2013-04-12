@@ -1,19 +1,33 @@
+/*
+Author: Gowtham Ashok
+E-mail: gwty93@gmail.com
+Program: Water Quality Index Calculator
+Note:
+Runs in 1600x900, resolutions lesser than 1600x900 are badly supported
+to compile
+mkdir build
+cd build
+qmake ..
+make
+*/
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 }
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    
+
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    
+
 private slots:
     void on_pushButton_pressed();
 
